@@ -11,7 +11,11 @@ export default {
   props: {
     age: {
       type: Number,
-      required: true,
+      // required: true,
+      // default: 20,
+      validator(value) {
+        return value < 130;
+      },
     },
   },
   emits: ["age-change"],
